@@ -65,6 +65,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ArchimydesDataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="LoginResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Story.cs">
       <DependentUpon>ArchimydesDataModel.tt</DependentUpon>

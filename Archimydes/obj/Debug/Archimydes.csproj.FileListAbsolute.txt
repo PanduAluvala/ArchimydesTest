@@ -89,3 +89,6 @@ C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes\bin\EntityFramework.xml
 C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes\bin\EntityFramework.dll
 C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes\bin\EntityFramework.SqlServer.dll
 C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes\bin\EntityFramework.SqlServer.xml
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes\bin\JWT.dll
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes\bin\JWT.pdb
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes\bin\JWT.xml
