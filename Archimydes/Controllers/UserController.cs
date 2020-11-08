@@ -13,7 +13,7 @@ namespace Archimydes.Controllers
         // api/User
         public IEnumerable<User> Get()
         {
-            using (ArchimydesEntities entities = new ArchimydesEntities())
+            using (var entities = new ArchimydesEntities())
             {
                 return entities.Users.ToList();
             }
@@ -22,7 +22,7 @@ namespace Archimydes.Controllers
         // api/User/1
         public User Get(int id)
         {
-            using (ArchimydesEntities entities = new ArchimydesEntities())
+            using (var entities = new ArchimydesEntities())
             {
                 return entities.Users.FirstOrDefault(e => e.UserId == 1);
             }

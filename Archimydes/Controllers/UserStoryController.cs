@@ -13,34 +13,20 @@ namespace Archimydes.Controllers
         // api/UserStory
         public HttpResponseMessage Get()
         {
-            using (ArchimydesEntities entities = new ArchimydesEntities())
+            using (var entities = new ArchimydesEntities())
             {
-                var entity =  entities.Stories.ToList();
-                if (entity != null)
-                {
-                    return Request.CreateResponse(HttpStatusCode.OK, entity);
-                }
-                else
-                {
-                    return Request.CreateErrorResponse(HttpStatusCode.NotFound, "stories do not exist");
-                }
+                var entity = entities.Stories.ToList();
+                return Request.CreateResponse(HttpStatusCode.OK, entity);
             }
         }
 
         // api/UserStory/1
         public HttpResponseMessage Get(int id)
         {
-            using (ArchimydesEntities entities = new ArchimydesEntities())
+            using (var entities = new ArchimydesEntities())
             {
                 var entity = entities.Stories.FirstOrDefault(e => e.UserStoryID == id);
-                if (entity != null)
-                {
-                    return Request.CreateResponse(HttpStatusCode.OK, entity);
-                }
-                else
-                {
-                    return Request.CreateErrorResponse(HttpStatusCode.NotFound, "story with id " + id.ToString() + "does not exist");
-                }
+                return entity != null ? Request.CreateResponse(HttpStatusCode.OK, entity) : Request.CreateErrorResponse(HttpStatusCode.NotFound, "story with id " + id.ToString() + "does not exist");
             }
         }
 
@@ -49,7 +35,7 @@ namespace Archimydes.Controllers
         {
             try
             {
-                using (ArchimydesEntities entities = new ArchimydesEntities())
+                using (var entities = new ArchimydesEntities())
                 {
                     entities.Stories.Add(userStory);
                     entities.SaveChanges();

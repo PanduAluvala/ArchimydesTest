@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using Archimydes.DataAccessLayer;
+using System.ComponentModel.DataAnnotations;
 
 namespace Archimydes.UnitTests
 {
@@ -69,6 +70,98 @@ namespace Archimydes.UnitTests
         {
             var sut = new User() { Email = value };
             Assert.That(sut.Email, Is.EqualTo(value));
+        }
+
+        [Test]
+        public void Given_A_User_When_Password_The_Default_Value_Is_Null()
+        {
+            var sut = new User();
+            Assert.That(sut.Password, Is.Null);
+        }
+
+        [TestCase("password")]
+        [TestCase("")]
+        [TestCase(("archymedis"))]
+        public void Given_A_User_When_Password_The_Default_Value_Is_Input_Value(string value)
+        {
+            var sut = new User() { Password = value };
+            Assert.That(sut.Password, Is.EqualTo(value));
+        }
+
+        [Test]
+        public void Given_A_User_When_Role_The_Default_Value_Is_Null()
+        {
+            var sut = new User();
+            Assert.That(sut.Role, Is.Null);
+        }
+
+        [TestCase("User")]
+        [TestCase("")]
+        [TestCase(("Admin"))]
+        public void Given_A_User_When_Role_The_Default_Value_Is_Input_Value(string value)
+        {
+            var sut = new User() { Role = value };
+            Assert.That(sut.Role, Is.EqualTo(value));
+        }
+
+        [Test]
+        public void Given_A_User_When_Token_The_Default_Value_Is_Null()
+        {
+            var sut = new User();
+            Assert.That(sut.Token, Is.Null);
+        }
+
+        [TestCase("token")]
+        [TestCase("")]
+        [TestCase(("hashed token"))]
+        public void Given_A_User_When_Token_The_Default_Value_Is_Input_Value(string value)
+        {
+            var sut = new User() { Token = value };
+            Assert.That(sut.Token, Is.EqualTo(value));
+        }
+
+        [Test]
+        public void Given_A_User_When_CreatedDateTime_The_Default_Value_Is_Null()
+        {
+            var sut = new User();
+            Assert.That(sut.CreatedDateTime, Is.EqualTo(default(DateTime)));
+        }
+
+        [TestCase("03/23/1992")]
+        public void Given_A_User_When_CreatedDateTime_The_Default_Value_Is_Input_Value(DateTime value)
+        {
+            var sut = new User() { CreatedDateTime = value };
+            Assert.That(sut.CreatedDateTime, Is.EqualTo(value));
+        }
+
+        [Test]
+        public void Given_A_User_When_ModifiedDateTime_The_Default_Value_Is_Null()
+        {
+            var sut = new User();
+            Assert.That(sut.ModifiedDateTime, Is.EqualTo(new DateTime(1, 1, 1, 0, 0, 0, DateTimeKind.Utc)));
+        }
+
+        [TestCase("03/23/1992")]
+        public void Given_A_User_When_ModifiedDateTime_The_Default_Value_Is_Input_Value(DateTime value)
+        {
+            var sut = new User() { ModifiedDateTime = value };
+            Assert.That(sut.ModifiedDateTime, Is.EqualTo(value));
+        }
+
+        [Test]
+        public void Given_A_User_When_Stories_The_Default_Length_Is_Zero()
+        {
+            var sut = new User();
+            Assert.That(sut.Stories.Count, Is.Zero);
+        }
+
+        [Test]
+        public void Given_A_User_When_Stories_The_Default_Value_Is_Input_Value()
+        {
+            var story = new Story() {Complexity = "High", CreatedDateTime = new DateTime(2020, 03, 23)};
+            var sut = new User() {Stories = new List<Story>()};
+            sut.Stories.Add(story);
+            Assert.That(sut.Stories.Count, Is.EqualTo(1));
         }
     }
 }
