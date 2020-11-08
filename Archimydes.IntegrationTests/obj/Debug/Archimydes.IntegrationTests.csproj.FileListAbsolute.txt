@@ -1,0 +1,17 @@
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\bin\Debug\Archimydes.IntegrationTests.dll
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\bin\Debug\Archimydes.IntegrationTests.pdb
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\obj\Debug\Archimydes.IntegrationTests.csprojAssemblyReference.cache
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\obj\Debug\Archimydes.IntegrationTests.dll
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\obj\Debug\Archimydes.IntegrationTests.pdb
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\bin\Debug\Castle.Core.dll
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\bin\Debug\Moq.dll
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\bin\Debug\nunit.framework.dll
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\bin\Debug\Castle.Core.xml
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\bin\Debug\Moq.xml
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\bin\Debug\nunit.framework.pdb
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\bin\Debug\nunit.framework.xml
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.IntegrationTests\obj\Debug\Archimydes.IntegrationTests.csproj.CopyComplete

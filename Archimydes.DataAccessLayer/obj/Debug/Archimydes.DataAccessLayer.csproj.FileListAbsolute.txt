@@ -1,0 +1,11 @@
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.DataAccessLayer\bin\Debug\Archimydes.DataAccessLayer.dll.config
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.DataAccessLayer\bin\Debug\Archimydes.DataAccessLayer.dll
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.DataAccessLayer\bin\Debug\Archimydes.DataAccessLayer.pdb
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.DataAccessLayer\obj\Debug\Archimydes.DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.DataAccessLayer\obj\Debug\Archimydes.DataAccessLayer.csproj.CopyComplete
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.DataAccessLayer\obj\Debug\Archimydes.DataAccessLayer.dll
+C:\Users\pandu\OneDrive\Desktop\Archimydes\Archimydes.DataAccessLayer\obj\Debug\Archimydes.DataAccessLayer.pdb
