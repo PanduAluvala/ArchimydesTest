@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b9db8c3820a3444595557a65badcea18" Name="Diagram1">
+      <Diagram DiagramId="e50d2387193445abb2b707cee8fba66c" Name="Diagram1">
         <EntityTypeShape EntityType="ArchimydesModel.Story" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchimydesModel.User" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchimydesModel.User" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="ArchimydesModel.FK_User_UserId" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

@@ -5,9 +5,11 @@
       <PropertyRef Name="UserStoryID" />
     </Key>
     <Property Name="UserStoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
     <Property Name="Summary" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Complexity" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="EstimatedTime" Type="DateTime" Precision="7" />
     <Property Name="CreatedDateTime" Type="DateTime" Nullable="false" Precision="7" />
@@ -32,6 +34,14 @@
   <Association Name="FK_User_UserId">
     <End Role="User" Type="Self.User" Multiplicity="1" />
     <End Role="Story" Type="Self.Story" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Story">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ArchimydesEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Stories" EntityType="Self.Story" />

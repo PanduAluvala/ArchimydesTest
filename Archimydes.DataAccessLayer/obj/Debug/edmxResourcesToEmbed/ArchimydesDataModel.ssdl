@@ -9,6 +9,7 @@
     <Property Name="Summary" Type="varchar" MaxLength="500" />
     <Property Name="Description" Type="varchar" MaxLength="500" />
     <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
     <Property Name="Complexity" Type="varchar" MaxLength="10" />
     <Property Name="EstimatedTime" Type="datetime2" Precision="7" />
     <Property Name="CreatedDateTime" Type="datetime2" Precision="7" Nullable="false" />

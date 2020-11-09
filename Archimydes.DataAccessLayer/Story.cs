@@ -7,8 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.ComponentModel.DataAnnotations;
-
 namespace Archimydes.DataAccessLayer
 {
     using System;
@@ -21,12 +19,12 @@ namespace Archimydes.DataAccessLayer
         public string Summary { get; set; }
         public string Description { get; set; }
         public string Type { get; set; }
+        public string Status { get; set; }
         public string Complexity { get; set; }
         public Nullable<System.DateTime> EstimatedTime { get; set; }
         public System.DateTime CreatedDateTime { get; set; }
         public System.DateTime ModifiedDateTime { get; set; }
-
-        [ScaffoldColumn(false)]
+    
         public virtual User User { get; set; }
     }
 }

@@ -14,6 +14,7 @@
           <Property Name="Summary" Type="varchar" MaxLength="500" />
           <Property Name="Description" Type="varchar" MaxLength="500" />
           <Property Name="Type" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
           <Property Name="Complexity" Type="varchar" MaxLength="10" />
           <Property Name="EstimatedTime" Type="datetime2" Precision="7" />
           <Property Name="CreatedDateTime" Type="datetime2" Precision="7" Nullable="false" />
@@ -67,6 +68,7 @@
           <Property Name="Summary" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Complexity" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="EstimatedTime" Type="DateTime" Precision="7" />
           <Property Name="CreatedDateTime" Type="DateTime" Nullable="false" Precision="7" />
@@ -122,6 +124,7 @@
                 <ScalarProperty Name="Summary" ColumnName="Summary" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Complexity" ColumnName="Complexity" />
                 <ScalarProperty Name="EstimatedTime" ColumnName="EstimatedTime" />
                 <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
