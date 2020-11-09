@@ -80,7 +80,6 @@ namespace Archimydes.Controllers
                     {
                         return Request.CreateResponse(HttpStatusCode.Unauthorized, "User not Authorized");
                     }
-
                     var entity = entities.Stories.Where(e => e.UserId == id).Select(story =>
                         new
                         {
