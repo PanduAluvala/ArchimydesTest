@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archimydes", "Archimydes\Ar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archimydes.UnitTests", "Archimydes.UnitTests\Archimydes.UnitTests.csproj", "{328324D2-A2C3-41B2-A7E9-138015B97723}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archimydes.IntegrationTests", "Archimydes.IntegrationTests\Archimydes.IntegrationTests.csproj", "{DECB46F4-C9CD-4C17-AB7B-73540CA3AFDC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archimydes.DataAccessLayer", "Archimydes.DataAccessLayer\Archimydes.DataAccessLayer.csproj", "{1B9C4864-E321-4B0E-93CE-6C14E2903374}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{328324D2-A2C3-41B2-A7E9-138015B97723}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{328324D2-A2C3-41B2-A7E9-138015B97723}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{328324D2-A2C3-41B2-A7E9-138015B97723}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DECB46F4-C9CD-4C17-AB7B-73540CA3AFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DECB46F4-C9CD-4C17-AB7B-73540CA3AFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DECB46F4-C9CD-4C17-AB7B-73540CA3AFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DECB46F4-C9CD-4C17-AB7B-73540CA3AFDC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1B9C4864-E321-4B0E-93CE-6C14E2903374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1B9C4864-E321-4B0E-93CE-6C14E2903374}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B9C4864-E321-4B0E-93CE-6C14E2903374}.Release|Any CPU.ActiveCfg = Release|Any CPU
