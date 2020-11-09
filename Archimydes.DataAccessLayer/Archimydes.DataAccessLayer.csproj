@@ -50,38 +50,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArchimydesDataModel.Context.cs">
+    <Compile Include="ArchimydesDataAccess.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ArchimydesDataModel.Context.tt</DependentUpon>
+      <DependentUpon>ArchimydesDataAccess.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ArchimydesDataModel.cs">
+    <Compile Include="ArchimydesDataAccess.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ArchimydesDataModel.tt</DependentUpon>
+      <DependentUpon>ArchimydesDataAccess.tt</DependentUpon>
     </Compile>
-    <Compile Include="ArchimydesDataModel.Designer.cs">
+    <Compile Include="ArchimydesDataAccess.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ArchimydesDataModel.edmx</DependentUpon>
+      <DependentUpon>ArchimydesDataAccess.edmx</DependentUpon>
     </Compile>
     <Compile Include="LoginResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Story.cs">
-      <DependentUpon>ArchimydesDataModel.tt</DependentUpon>
+      <DependentUpon>ArchimydesDataAccess.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>ArchimydesDataModel.tt</DependentUpon>
+      <DependentUpon>ArchimydesDataAccess.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="ArchimydesDataModel.edmx">
+    <EntityDeploy Include="ArchimydesDataAccess.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ArchimydesDataModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>ArchimydesDataAccess.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ArchimydesDataModel.edmx.diagram">
-      <DependentUpon>ArchimydesDataModel.edmx</DependentUpon>
+    <None Include="ArchimydesDataAccess.edmx.diagram">
+      <DependentUpon>ArchimydesDataAccess.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -89,15 +89,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ArchimydesDataModel.Context.tt">
+    <Content Include="ArchimydesDataAccess.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ArchimydesDataModel.edmx</DependentUpon>
-      <LastGenOutput>ArchimydesDataModel.Context.cs</LastGenOutput>
+      <DependentUpon>ArchimydesDataAccess.edmx</DependentUpon>
+      <LastGenOutput>ArchimydesDataAccess.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ArchimydesDataModel.tt">
+    <Content Include="ArchimydesDataAccess.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ArchimydesDataModel.edmx</DependentUpon>
-      <LastGenOutput>ArchimydesDataModel.cs</LastGenOutput>
+      <DependentUpon>ArchimydesDataAccess.edmx</DependentUpon>
+      <LastGenOutput>ArchimydesDataAccess.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

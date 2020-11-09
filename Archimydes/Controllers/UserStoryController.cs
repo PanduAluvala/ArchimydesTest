@@ -11,40 +11,88 @@ namespace Archimydes.Controllers
     public class UserStoryController : ApiController
     {
         // api/UserStory
+
+        // Get all stories for admin
         [HttpGet]
         public HttpResponseMessage Get()
-        {
-            using (var entities = new ArchimydesEntities())
-            {
-                var entity = entities.Stories.ToList();
-                return Request.CreateResponse(HttpStatusCode.OK, entity);
-            }
-        }
-
-        // api/UserStory/id
-        [HttpGet]
-        public HttpResponseMessage Get(int id)
-        {
-            using (var entities = new ArchimydesEntities())
-            {
-                var entity = entities.Stories.FirstOrDefault(e => e.UserStoryID == id);
-                return entity != null ? Request.CreateResponse(HttpStatusCode.OK, entity) : Request.CreateErrorResponse(HttpStatusCode.NotFound, "story with id " + id.ToString() + "does not exist");
-            }
-        }
-
-        // api/UserStory
-        [HttpPost]
-        public HttpResponseMessage Post([FromBody]Story userStory)
         {
             try
             {
                 using (var entities = new ArchimydesEntities())
                 {
+                    var jwtAuthorizationParameter = Request.Headers.Authorization.Parameter;
+                    var currentLoggedInUser =
+                        entities.Users.FirstOrDefault(user => user.Token == jwtAuthorizationParameter);
+                    if (currentLoggedInUser == null || currentLoggedInUser.Role.ToLower() != "admin")
+                    {
+                        return Request.CreateResponse(HttpStatusCode.Unauthorized, "User not Authorized");
+                    }
+                    var entity = entities.Stories.ToList();
+                    return Request.CreateResponse(HttpStatusCode.OK, entity);
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }
+
+        // api/UserStory/id
+        // Get the stories created by user
+        [HttpGet]
+        public HttpResponseMessage Get(int id)
+        {
+            try
+            {
+                using (var entities = new ArchimydesEntities())
+                {
+                    var jwtAuthorizationParameter = Request.Headers.Authorization.Parameter;
+                    var currentLoggedInUser =
+                        entities.Users.FirstOrDefault(user => user.Token == jwtAuthorizationParameter);
+                    if (currentLoggedInUser == null || currentLoggedInUser.Role.ToLower() != "user" || currentLoggedInUser.UserId != id)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.Unauthorized, "User not Authorized");
+                    }
+
+                    var entity = entities.Stories.Where(e => e.UserId == id).Select(story =>
+                        new
+                        {
+                            UserStoryID = story.UserStoryID, UserId = story.UserId, Summary = story.Summary,
+                            Description = story.Description, Type = story.Type, Complexity = story.Complexity,
+                            EstimatedDateTime = story.EstimatedTime
+                        }).ToList();
+                    return entity.Count > 0 ? Request.CreateResponse(HttpStatusCode.OK, entity) : Request.CreateErrorResponse(HttpStatusCode.NotFound, "stories do not exist for this user");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }
+
+        // api/UserStory
+
+        //create story for user
+        [HttpPost]
+        public HttpResponseMessage Post([FromBody]Story userStory)
+        {
+            try
+            {
+                var jwtAuthorizationParameter = Request.Headers.Authorization.Parameter;
+                using (var entities = new ArchimydesEntities())
+                {
+                    var currentLoggedInUser =
+                        entities.Users.FirstOrDefault(user => user.Token == jwtAuthorizationParameter);
+                    if (currentLoggedInUser == null)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.Unauthorized, "User not Authorized");
+                    }
                     userStory.CreatedDateTime = DateTime.Now;
                     userStory.ModifiedDateTime = DateTime.Now;
+                    userStory.UserId = currentLoggedInUser.UserId;
                     entities.Stories.Add(userStory);
                     entities.SaveChanges();
-                    var message = Request.CreateResponse(HttpStatusCode.Created, userStory);
+                    var message = Request.CreateResponse(HttpStatusCode.Created, "User story created");
                     message.Headers.Location = new Uri(Request.RequestUri + userStory.UserStoryID.ToString());
                     return message;
                 }
@@ -56,6 +104,8 @@ namespace Archimydes.Controllers
         }
 
         // api/UserStory/id
+
+        // delete story for admin
         [HttpDelete]
         public HttpResponseMessage Delete(int id)
         {
@@ -83,6 +133,8 @@ namespace Archimydes.Controllers
         }
 
         // api/UserStory/id
+        // edit story for admin
+
         [HttpPut]
         public HttpResponseMessage Put(int id, [FromBody]Story story)
         {

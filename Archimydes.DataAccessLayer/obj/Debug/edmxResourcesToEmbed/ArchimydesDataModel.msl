@@ -5,7 +5,6 @@
       <EntityTypeMapping TypeName="ArchimydesModel.Story">
         <MappingFragment StoreEntitySet="Story">
           <ScalarProperty Name="UserStoryID" ColumnName="UserStoryID" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="Summary" ColumnName="Summary" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Type" ColumnName="Type" />
@@ -31,5 +30,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <AssociationSetMapping Name="FK_User_UserId" TypeName="ArchimydesModel.FK_User_UserId" StoreEntitySet="Story">
+      <EndProperty Name="User">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="Story">
+        <ScalarProperty Name="UserStoryID" ColumnName="UserStoryID" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

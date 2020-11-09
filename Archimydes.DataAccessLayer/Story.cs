@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+
 namespace Archimydes.DataAccessLayer
 {
     using System;
@@ -23,7 +25,8 @@ namespace Archimydes.DataAccessLayer
         public Nullable<System.DateTime> EstimatedTime { get; set; }
         public System.DateTime CreatedDateTime { get; set; }
         public System.DateTime ModifiedDateTime { get; set; }
-    
+
+        [ScaffoldColumn(false)]
         public virtual User User { get; set; }
     }
 }
