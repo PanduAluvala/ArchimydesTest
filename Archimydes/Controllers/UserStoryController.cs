@@ -43,7 +43,18 @@ namespace Archimydes.Controllers
 
                         return Request.CreateResponse(HttpStatusCode.OK, userEntities);
                     }
-                    var entity = entities.Stories.ToList();
+                    var entity = entities.Stories.Select(story =>
+                        new
+                        {
+                            UserStoryID = story.UserStoryID,
+                            UserId = story.UserId,
+                            Summary = story.Summary,
+                            Status = story.Status,
+                            Description = story.Description,
+                            Type = story.Type,
+                            Complexity = story.Complexity,
+                            EstimatedDateTime = story.EstimatedTime
+                        }).ToList();
                     return currentLoggedInUser.Role.ToLower() == "admin" ? Request.CreateResponse(HttpStatusCode.OK, entity) : Request.CreateResponse(HttpStatusCode.NotFound, "User does not exist");
                 }
             }
