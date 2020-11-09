@@ -81,3 +81,65 @@ body
      "EstimatedTime":"2020-12-08 18:42:10.6500000"
 }
 
+
+api response - "User story created"
+
+
+Api to Get all stories 
+https://localhost:44373/api/UserStory/
+
+resposne 
+
+[
+    {
+        "UserStoryID": 1,
+        "UserId": 2,
+        "Summary": "Create a signup page",
+        "Status": null,
+        "Description": "Hello",
+        "Type": "Medimum",
+        "Complexity": "Medium",
+        "EstimatedDateTime": "2020-12-08T18:42:10.65"
+    },
+    {
+        "UserStoryID": 2,
+        "UserId": 3,
+        "Summary": "Create a signup page",
+        "Status": null,
+        "Description": "Hello",
+        "Type": "Medimum",
+        "Complexity": "Medium",
+        "EstimatedDateTime": "2020-12-08T18:42:10.65"
+    },
+    {
+        "UserStoryID": 3,
+        "UserId": 3,
+        "Summary": "Create a signup page",
+        "Status": null,
+        "Description": "Hello",
+        "Type": "Medimum",
+        "Complexity": "Medium",
+        "EstimatedDateTime": "2020-12-08T18:42:10.65"
+    },
+    {
+        "UserStoryID": 4,
+        "UserId": 3,
+        "Summary": "Create a signup when ever you want page",
+        "Status": "Rejected",
+        "Description": "Hello",
+        "Type": "Medimum",
+        "Complexity": "Medium",
+        "EstimatedDateTime": "2020-12-08T18:42:10.65"
+    },
+    {
+        "UserStoryID": 5,
+        "UserId": 1,
+        "Summary": "Create a signup when ever you want page",
+        "Status": "Rejected",
+        "Description": "Hello",
+        "Type": "Medimum",
+        "Complexity": "Medium",
+        "EstimatedDateTime": "2020-12-08T18:42:10.65"
+    }
+]
+
