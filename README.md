@@ -143,3 +143,18 @@ resposne
     }
 ]
 
+api to update user story 
+
+put request - https://localhost:44373/api/UserStory/
+
+response 
+  {
+        "UserStoryID": 5,
+        "UserId": 1,
+        "Summary": "Create a signup when ever you want page",
+        "Status": "Rejected",
+        "Description": "Hello",
+        "Type": "Medimum",
+        "Complexity": "Medium",
+        "EstimatedDateTime": "2020-12-08T18:42:10.65"
+    }
