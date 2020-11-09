@@ -28,3 +28,56 @@ admin can edit the stories and reject the stories
 Passwords are encrypted and on user signup each user is assigned a jwt token geenrated using jwt nuget package 
 
 the jwt token is validated on each request to update the stories by both user and admin 
+
+
+Api to create user for both admins and users
+
+Post request 
+https://localhost:44373/api/SignUp/
+
+body formdata {
+     "FirstName":"justin",
+     "LastName":"nancy",
+     "Email":"justin123@gmail.com",
+     "Password": "password123",
+     "Role":"User"
+}
+
+
+Api response { "User successfully created"  } 
+
+Api for Login User 
+https://localhost:44373/api/Login/ - Post request 
+
+body {
+     "Email":"justin123@gmail.com",
+     "Password": "passsword123"
+}
+
+Api response
+
+ {
+    "Email": "justin123@gmail.com",
+    "UserId": 1,
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InBhbmR1Y2hpbm5hQGljbG91ZC5jb20iLCJwYXNzd29yZCI6IjV5S2lERjNXczZmaUlhRlpLb2V6eWszNHhSYXF0R0EyVXVGTjYzT1k2U0U9In0.ERTFqtK9VMGsXZ-ZswF1x8osi33kdq2vTRI-Y7KLABo",
+    "Role": "user",
+    "FirstName": "justin",
+    "LastName": "nancy"
+}
+
+
+Api to create story 
+
+Post request 
+https://localhost:44373/api/UserStory/
+
+body 
+{
+     "Summary":"Create a signup when ever you want page",
+     "Description":"Hello",
+     "Status":"Rejected",
+     "Type":"Medimum",
+     "Complexity":"Medium",
+     "EstimatedTime":"2020-12-08 18:42:10.6500000"
+}
+
